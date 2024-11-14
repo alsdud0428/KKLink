@@ -73,7 +73,7 @@ cos:
   secret: 겟인데어
 
 file:
-  path: C:/src/jwtoauthwork/instagram/src/main/resources/upload/
+  path: C:/src/jwtoauthwork/kklink/src/main/resources/upload/
 ```
 
 ## 맞팔 쿼리, 좋아요 카운트 쿼리
