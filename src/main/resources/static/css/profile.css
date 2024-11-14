@@ -1,0 +1,452 @@
+#profile {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  font-size: 16px;
+  padding-top: 30px;
+}
+
+.profile__stat a {
+  text-decoration: none;
+  color: #0092cf;
+}
+
+/* userProfileUpload 수정 */
+#profile .profile__header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* 삭제 */
+/* .profile__header .profile__info {
+  width: 70%;
+} */
+
+.profile__header .avatar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* userProfileUpload 수정 */
+.avatar__container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* animation: 6s potato infinite ease-in-out; */
+}
+
+/* userProfileUpload 수정 */
+.profile__photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  min-height: 525px;
+}
+
+/* userProfileUpload 수정 */
+.profile__info .profile__title,
+.profile__info .profile__stats {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* userProfileUpload 수정 */
+.profile__stat {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+  text-align: center;
+}
+
+/* userProfileUpload 수정 */
+@media (max-width: 700px) {
+  #profile .profile__header {
+    grid-template-columns: auto;
+  }
+
+  .profile__photo-grid {
+    grid-template-columns: auto;
+  }
+
+  .avatar__container {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .profile__info {
+    margin-top: 20px;
+  }
+
+  .profile__stat {
+    grid-template-columns: auto;
+  }
+}
+
+.profile__title h1 {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.profile__title a {
+  margin-right: 10px;
+}
+
+.profile_follow_btn {
+  color: white;
+  background: #3c88de;
+  border: 0;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 3px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.profile_edit_btn {
+  border: 0;
+  font-weight: 600;
+  padding: 5px 10px;
+  background: transparent;
+  border-radius: 3px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.profile__title i {
+  cursor: pointer;
+  font-size: 22px;
+  animation: 1s rotate infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.profile__stats .profile__stat {
+  margin-right: 45px;
+}
+
+.profile__stat .profile__stat-number {
+  font-weight: 600;
+}
+
+.profile__bio .profile__fullname,
+.profile__bio .profile__link {
+  font-weight: 600;
+}
+
+.profile__bio .profile__link {
+  color: #385185;
+}
+
+.profile__bio {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.profile__bio p {
+  margin-bottom: 5px;
+}
+
+/* 삭제 */
+/* .profile__photo-row .profile__photo {
+  width: 32%;
+} */
+
+.profile__photo a img {
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+}
+
+.profile__photo {
+  position: relative;
+}
+
+.profile__photo .profile__photo-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.profile__photo-overlay .profile__photo-stat {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.profile__photo-overlay .profile__photo-stat:first-child {
+  margin-right: 20px;
+}
+
+.profile__photo:hover .profile__photo-overlay {
+  opacity: 1;
+}
+
+/* 삭제 */
+/* .profile__photo-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+} */
+
+.profile__photo-stat i.fa-heart {
+  transform: scale(40);
+  animation: 0.5s pump infinite linear;
+}
+
+@keyframes pump {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.profile__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.profile__overlay1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.profile__overlay i {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.profile__overlay1 i {
+  left: 20px;
+  top: 25px;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.profile__overlay-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+#profile__overlay-container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.profile__overlay-link {
+  background: white;
+  width: 400px;
+  text-align: center;
+  padding: 20px 0;
+  color: inherit;
+  border-bottom: 1px solid #e6e6e6;
+  transition: background 0.5s ease-out;
+}
+
+.profile__overlay-link2 {
+  background: white;
+  width: 400px;
+  text-align: center;
+  font-weight: 700;
+  padding: 20px 0;
+  font-size: 20px;
+  color: inherit;
+  border-bottom: 1px solid #e6e6e6;
+  transition: background 0.5s ease-out;
+}
+
+.profile__overlay-link3 {
+  background: white;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  font-weight: 700;
+  padding: 20px 0;
+  color: inherit;
+  border-bottom: 1px solid #e6e6e6;
+  transition: background 0.5s ease-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.profile__overlay-link:hover {
+  background: #efefef;
+}
+
+/* 새로운 모달창 설정들 */
+.modal-content {
+  border-radius: 0.9rem;
+}
+.modal {
+  padding: 0px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 430px;
+    margin: 1.75rem auto;
+  }
+  .modal {
+    padding: 0px;
+  }
+}
+.modal-body {
+  background-color: transparent;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  cursor: pointer;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 48px;
+  padding: 4px 8px;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  width: 100%;
+  line-height: 40px;
+  text-decoration: none !important;
+  color: black;
+}
+.modal-content :first-child {
+  border-top: 0px;
+}
+.for__profile__modal {
+  pointer-events: none;
+  font-weight: 600;
+  font-size: large;
+  line-height: 80px;
+}
+/* modal 창을 열면 패딩이 맘대로 생기는 현상 방지용 소스 시작 */
+body.modal-open {
+  overflow: auto;
+}
+
+body.modal-open[style] {
+  padding-right: 0px !important;
+}
+/* modal 창을 열면 패딩이 맘대로 생기는 현상 방지용 소스 끝 */
+
+/* 팔로우,팔로워 모달창 스크롤바 모서리 라운드 처리 */
+
+#_1XyCr {
+  background-color: #fff;
+  background-color: rgba(var(--f23, 255, 255, 255), 1);
+  border-radius: 12px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* 팔로우,팔로워 모달창 header부분 */
+.m82CD {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 24px;
+  text-align: center;
+}
+
+#modalheard {
+  height: 53px;
+}
+
+/* 팔로우,팔로워 모달창 body부분 */
+.isgrP {
+  border-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  min-height: 60px;
+  overflow: auto;
+  max-height: 400px;
+}
+
+.profile__photo__modify__div {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+.profile__modify__div {
+  margin-left: 3px;
+}
+
+.profile__Gear {
+  margin-left: 10px;
+}

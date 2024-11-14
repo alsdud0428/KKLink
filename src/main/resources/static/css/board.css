@@ -1,0 +1,122 @@
+.full-image {
+  display: flex;
+  width: 100%;
+  max-height: 600px;
+}
+
+.comment-btn {
+  width: 50px;
+  text-decoration: none;
+  color: rgba(var(--d69, 0, 149, 246), 1);
+  pointer-events: auto;
+  font-weight: 700;
+  padding: 5px 5px;
+}
+.photo__add-comment-container input {
+  height: 50px;
+  padding: 16px 10px;
+}
+.photo__info .photo__add-comment-container {
+  border: none;
+  margin-top: 0px;
+}
+
+.for-devide {
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+  width: 100%;
+  margin: 5px 0px;
+  margin-top: 1px;
+}
+
+.for-devide1 {
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+  width: 100%;
+  margin-top: 9px;
+}
+
+.photo__comments {
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  max-height: 230px;
+}
+.photo__comments::-webkit-scrollbar {
+  display: none;
+}
+.photo__info {
+  padding: 0px;
+  height: auto;
+}
+#contents-boxing {
+  width: 335px;
+  height: auto;
+  max-height: 496px;
+  /* max-height: 600px; */
+  border-left: 1px solid rgba(0, 0, 0, 0.0975);
+}
+.contentBox-bottomSection {
+  height: auto;
+  width: 334px;
+  overflow: hidden;
+}
+.icon-margin {
+  padding: 0px 12px;
+}
+
+.photo_post_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  width: 600px;
+}
+
+.photo_post_image img {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  max-height: 479px;
+  height: auto;
+  width: 100%;
+}
+.content-padding {
+  padding: 17px;
+  max-height: 288px;
+  /* padding-bottom: 80px; */
+}
+.photo__header {
+  display: flex;
+}
+.board-img-box img {
+  width: 15px !important;
+  height: 15px !important;
+  margin-right: 0px;
+}
+
+.trash__attribute {
+  color: lightsteelblue;
+}
+
+.comments__ul__div {
+  min-height: 230px;
+  max-height: 248px;
+}
+
+.margin__bottom {
+  margin-bottom: 150px;
+}
+
+.photo .border__photo__header {
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.border__photo__header img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

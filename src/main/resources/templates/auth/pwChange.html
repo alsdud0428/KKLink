@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KKLink</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <head th:replace="layout/header :: header"> </head>
+  </head>
+  <body>
+    <script src="/js/pwChange.js"></script>
+    <nav th:replace="layout/header :: menu"></nav>
+    <main id="pwChange">
+      <div class="pwChange__column" id="for__pwChange">
+        <div class="pwChange__box">
+          <img src="/images/loginLogo.png" />
+          <span class="pwChange__divider2"> 비밀번호 변경 </span>
+          <form
+            name="pwChange"
+            id="newPasswrod"
+            action="/auth/pwChange"
+            method="post"
+            class="pwChange__form"
+          >
+            <!-- <input type="text" name="id" th:value="${id}" th:text="${id}" /> -->
+            <div class="group">
+              <input
+                type="hidden"
+                name="username"
+                th:value="${user.username}"
+                readonly
+              />
+              <!-- <label th:text="|사용자 이름|">Username</label> -->
+            </div>
+            <div class="group">
+              <input type="password" name="oldPassword" required />
+              <label th:text="|기존 비밀번호|">비밀번호</label>
+            </div>
+            <div class="group">
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                required
+              />
+              <label th:text="|새 비밀번호|">비밀번호</label>
+            </div>
+            <div class="group">
+              <input
+                type="password"
+                id="newRePassword"
+                name="newRePassword"
+                required
+                onkeyup="passwordCheckk()"
+              />
+              <label th:text="|새 비밀번호 확인|">비밀번호</label>
+              <div id="passwordCheckText" width="100"></div>
+            </div>
+
+            <input
+              th:onclick="|change()|"
+              type="button"
+              th:value="|비밀번호 변경|"
+            />
+          </form>
+          <span class="pwChange__divider2"> </span>
+          <a href="#" style="text-decoration: none">
+            <span class="pwChange__pwForget"> 비밀번호를 잊으셨나요? </span>
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer th:replace="layout/footer :: footer"></footer>
+  </body>
+</html>

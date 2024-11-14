@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+  <head th:replace="layout/header :: header"></head>
+  <body>
+    <nav th:replace="layout/header :: menu"></nav>
+    <main id="explore">
+      <ul class="explore__users u-default-box">
+        <div th:each=" i : ${notis}">         
+          <li class="explore__user">
+            <div class="explore__content">
+              <a th:href="|/user/${i.fromUser.id}|">         
+                <!-- 등록된 프로필 사진 나오도록 구현 -->    
+                <img               
+                  th:src="|/upload/${i.fromUser.profileImage}|"                  
+                  onerror="this.src='/images/avatar.jpg'"
+                />              
+              </a>
+              <div class="explore__info">
+                <span class="explore__username">
+                  <p th:text="${i.fromUser.name}+'이'"></p>
+                  <p th:text="${i.notiType.key}+' 하였습니다.'"></p>              
+                </span>
+              </div>
+            </div>
+          </li>
+        </div>
+       
+      </ul>
+    </main>
+    <script src="/js/follow.js"></script>  
+    <footer th:replace="layout/footer :: footer"></footer>
+  </body>
+</html>

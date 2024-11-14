@@ -1,0 +1,165 @@
+﻿#feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 10px;
+}
+
+.photo {
+  margin-bottom: 60px;
+}
+
+.photo .photo__header {
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.photo_user_info {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 6px 0;
+}
+
+.photo__username {
+  font-weight: 600;
+}
+
+/* 수정 좋아요 카운트 증가 */
+.photo_caption {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.photo_tag {
+  color: #0092cf;
+  margin-bottom: 6px;
+}
+
+.photo_post_image img {
+  width: 600px;
+  max-height: 600px;
+}
+
+.photo__header img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.photo img {
+  max-width: 100%;
+}
+
+.photo__info {
+  padding: 18px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.photo__info .photo__actions {
+  font-size: 24px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.photo__actions .photo__action {
+  margin-right: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+/* 수정 좋아요 카운트 증가 */
+.photo__info .photo__likes {
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.photo__comment .photo__comment-author {
+  font-weight: 600;
+}
+
+.photo__comments .photo__comment {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.photo__info .photo__date {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #999;
+}
+
+.photo__info .photo__add-comment-container {
+  margin-top: 15px;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.photo__add-comment-container input {
+  /* padding: 15px 0; */
+  padding-top: 19px;
+  padding-bottom: 5px;
+  border: 0;
+  resize: none;
+  width: 95%;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.photo__add-comment-container input:focus {
+  outline: none;
+}
+
+.photo__add-comment-container i {
+  cursor: pointer;
+  width: 50px;
+}
+
+.heart-clicked {
+  color: red;
+  animation: 0.5s pump infinite linear;
+}
+
+.feed_all {
+  display: flex;
+  float: left;
+  margin-right: 28px;
+}
+
+.recomend_only {
+  position: sticky;
+}
+
+.feed_olny {
+  display: flex;
+  z-index: -1;
+  position: relative;
+  flex-direction: column;
+  max-width: 900px;
+}
+/* 메인화면 반응형 */
+@media (max-width: 850px) {
+  #feed__s #feed__div {
+    display: none;
+  }
+}
+
+.feed__trash__attribute {
+  color: lightsteelblue;
+}
+.comment-btn {
+  width: 50px;
+  text-decoration: none;
+  color: rgba(var(--d69, 0, 149, 246), 1);
+  pointer-events: auto;
+  font-weight: 700;
+  padding: 5px 5px;
+}
